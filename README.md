@@ -45,7 +45,7 @@ wget https://raw.githubusercontent.com/zXMiguelXz/guacamole/refs/heads/main/1-se
 
 ## Actualización de Guacamole
 
-**Para actualizar Guacamole, edite upgrade-guacamole.sh para reflejar las últimas versiones de Guacamole & MySQL conector/J antes de ejecutar.** Este script también actualizará automáticamente las extensiones TOTP, DUO, LDAP, Quick Connect e History Recorded Storage si están presentes.
+**Para actualizar Guacamole (https://github.com/itiligent/Guacamole-Installer/blob/main/upgrade-guacamole.sh), edite upgrade-guacamole.sh para reflejar las últimas versiones de Guacamole & MySQL conector/J antes de ejecutar.** Este script también actualizará automáticamente las extensiones TOTP, DUO, LDAP, Quick Connect e History Recorded Storage si están presentes.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -98,6 +98,6 @@ wget https://raw.githubusercontent.com/zXMiguelXz/guacamole/refs/heads/main/1-se
 
 ## Guacamole update
 
-** To update Guacamole, edit upgrade-guacamole.sh to reflect the latest versions of Guacamole & MySQL connector / J before running.** This script will also automatically update the TOTP, DUO, LDAP, Quick Connect and History Recorded Storage extensions if they are present.
+** To update Guacamole (https://github.com/itiligent/Guacamole-Installer/blob/main/upgrade-guacamole.sh), edit upgrade-guacamole.sh to reflect the latest versions of Guacamole & MySQL connector / J before running.** This script will also automatically update the TOTP, DUO, LDAP, Quick Connect and History Recorded Storage extensions if they are present.
 
 
