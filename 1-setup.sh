@@ -155,7 +155,7 @@ RDP_PRINTER_LABEL="RDP Printer" # Custom RDP printer name shown in Windows
 # Script branding header
 echo
 echo -e "${GREYB}Guacamole ${GUAC_VERSION} Auto Installer."
-echo -e "              ${LGREEN}Powered by Itiligent"
+echo -e "              ${LGREEN}Powered by zXMiguelXz"
 echo
 echo
 
@@ -707,6 +707,7 @@ export LOCAL_DOMAIN=$LOCAL_DOMAIN
 export DOMAIN_SUFFIX=$DOMAIN_SUFFIX
 
 # Run the Guacamole install script (with all exported variables from this current shell)
+sudo chmod 777 ./2-install-guacamole.sh
 sudo -E ./2-install-guacamole.sh
 if [[ $? -ne 0 ]]; then
     echo -e "${LRED}2-install-guacamole.sh FAILED. See ${INSTALL_LOG}${GREY}" 1>&2
@@ -771,7 +772,7 @@ mv $USER_HOME_DIR/1-setup.sh $DOWNLOAD_DIR
 sudo apt remove -y build-essential &>>${INSTALL_LOG} # Lets not leave build resources installed on a secure system
 sudo apt-get -y autoremove &>>${INSTALL_LOG}
 if [[ $? -ne 0 ]]; then
-    echo -e "${LRED}Failed. See ${INSTALL_LOG}${GREY}" 1>&2
+    echo -e "${LRED}Failed. Remove guac-setup and mysqlbackups" 1>&2
     exit 1
 else
     echo -e "${LGREEN}OK${GREY}"
@@ -780,4 +781,8 @@ fi
 
 # Done
 printf "${LGREEN}Guacamole ${GUAC_VERSION} install complete! \n${NC}"
+printf "${LGREEN} This installation is a modification of itiligent\n${NC}"
+printf "${LGREEN}https://github.com/itiligent \n${NC}"
+
+
 echo -e ${NC}
