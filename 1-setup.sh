@@ -6,8 +6,6 @@
 # April 2023
 #######################################################################################################################
 
-# To install the latest code snapshot:
-# wget https://raw.githubusercontent.com/itiligent/Guacamole-Install/main/1-setup.sh && chmod +x 1-setup.sh && ./1-setup.sh
 
 # 1-setup.sh is a central script that manages all inputs, options and sequences other included 'install' scripts.
 # 2-install-guacamole downloads Guacamole source and exectutes all Guacamole's build instructions.
@@ -84,7 +82,6 @@ mkdir -p $DB_BACKUP_DIR
 
 # GitHub download branch
 GITHUB="https://raw.githubusercontent.com/zXMiguelXz/guacamole/main"
-#https://raw.githubusercontent.com/itiligent/Guacamole-Install/main AUTOR REAL
 
 # Version of Guacamole to install
 GUAC_VERSION="1.5.5"
@@ -136,7 +133,7 @@ RSA_KEYLENGTH="2048"            # Self signed RSA TLS key length. At least 2048,
 CERT_COUNTRY="AU"               # Self signed cert setup, 2 character country code only, must not be blank
 CERT_STATE="Victoria"           # Self signed cert setup, must not be blank
 CERT_LOCATION="Melbourne"       # Self signed cert setup, must not be blank
-CERT_ORG="Itiligent"            # Self signed cert setup, must not be blank
+CERT_ORG="zXMiguelXz"            # Self signed cert setup, must not be blank
 CERT_OU="I.T."                  # Self signed cert setup, must not be blank
 CERT_DAYS="3650"                # Self signed cert setup, days until self signed TLS cert expiry, blank = default 3650
 LETS_ENCRYPT=""                 # Add Lets Encrypt public TLS cert for Nginx (true/false, self signed TLS not available with this option) 
@@ -581,7 +578,7 @@ fi
 clear
 echo
 echo -e "${GREYB}Guacamole ${GUAC_VERSION} Auto Installer."
-echo -e "              ${LGREEN}Powered by Itiligent"
+echo -e "              ${LGREEN}Powered by zXMiguelXz"
 echo
 echo
 
@@ -765,6 +762,15 @@ if [[ $INSTALL_LDAP == "true" ]]; then
     echo -e "See https://guacamole.apache.org/doc/gug/ldap-auth.html"
 fi
 
+
+# Done
+printf "${LGREEN}Guacamole ${GUAC_VERSION} install complete! \n${NC}"
+printf "${LGREEN} This installation is a modification of zXMiguelXz\n${NC}"
+printf "${LGREEN}https://github.com/zXMiguelXz \n${NC}"
+
+
+echo -e ${NC}
+
 # Tidy up
 echo
 echo -e "${GREY}Removing build-essential package & cleaning up..."
@@ -772,17 +778,10 @@ mv $USER_HOME_DIR/1-setup.sh $DOWNLOAD_DIR
 sudo apt remove -y build-essential &>>${INSTALL_LOG} # Lets not leave build resources installed on a secure system
 sudo apt-get -y autoremove &>>${INSTALL_LOG}
 if [[ $? -ne 0 ]]; then
-    echo -e "${LRED}Failed. Remove guac-setup and mysqlbackups" 1>&2
+    echo -e "${LRED}Failed. Remove guac-setup, mysqlbackups and listInstall.sh" 1>&2
     exit 1
 else
     echo -e "${LGREEN}OK${GREY}"
     echo
 fi
 
-# Done
-printf "${LGREEN}Guacamole ${GUAC_VERSION} install complete! \n${NC}"
-printf "${LGREEN} This installation is a modification of itiligent\n${NC}"
-printf "${LGREEN}https://github.com/itiligent \n${NC}"
-
-
-echo -e ${NC}
