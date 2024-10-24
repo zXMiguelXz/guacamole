@@ -52,7 +52,8 @@ wget https://raw.githubusercontent.com/zXMiguelXz/guacamole/refs/heads/main/1-se
 
 # INSTALLATION OF GUACAMOLE
 
-`` shell
+```
+ shell
 wget https://raw.githubusercontent.com/zXMiguelXz/guacamole/refs/heads/main/1-setup.sh && chmod +x 1-setup.sh & ./1-setup.sh
 ```
 
