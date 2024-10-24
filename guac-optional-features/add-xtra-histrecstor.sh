@@ -2,8 +2,8 @@
 #######################################################################################################################
 # Add History Recorded Storage extension for Guacamole
 # For Ubuntu / Debian / Raspbian
-# David Harrop
-# September 2023
+# Miguel Garcia Leon
+# October 2024
 #######################################################################################################################
 
 # If run as standalone and not from the main installer script, check the below variables are correct.

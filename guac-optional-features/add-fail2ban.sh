@@ -2,8 +2,8 @@
 #######################################################################################################################
 # Add fail2ban restrictions to Guacamole
 # For Ubuntu / Debian / Raspbian
-# David Harrop
-# April 2023
+# Miguel Garcia Leon
+# October 2024
 #######################################################################################################################
 
 # Prepare text output colours

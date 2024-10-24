@@ -2,8 +2,8 @@
 #######################################################################################################################
 # Create or refresh self signed TLS certificates for Nginx (or others)
 # For Ubuntu / Debian / Rasbpian
-# David Harrop
-# September 2023
+# Miguel Garcia Leon
+# October 2024
 #######################################################################################################################
 
 # If run with with no command arguments, the ${PROXY_SITE}, ${CERT_DAYS} & ${Default_IP) values used during the 

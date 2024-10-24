@@ -2,8 +2,8 @@
 #######################################################################################################################
 # Guacamole MySQL backend install script. (For split DB and guacamole application layers.
 # For Ubuntu / Debian / Raspbian
-# David Harrop
-# September 2023
+# Miguel Garcia Leon
+# October 2024
 #######################################################################################################################
 
 # This script is for separating the Guacamole architecture into a scaled out three tiered system.
